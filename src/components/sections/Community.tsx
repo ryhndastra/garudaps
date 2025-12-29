@@ -79,7 +79,7 @@ export default function Community() {
             Community
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Join our community to connect, explore, and shape the future of MafiaPS!
+            Join our community to connect, explore, and shape the future of GarudaPS!
           </p>
         </div>
 
