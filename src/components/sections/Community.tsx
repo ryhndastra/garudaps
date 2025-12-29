@@ -22,7 +22,7 @@ export default function Community() {
       textGradient: "from-[#5865F2] to-[#4752C4]",
       buttonColor: "bg-[#5865F2]",
       description: "Join our vibrant Discord community! Chat with other players, check server status, trade items, and participate in daily giveaways.",
-      link: "https://discord.gg/yourlink", 
+      link: "https://discord.gg/jhJcGfd4mk", 
     },
     whatsapp: {
       title: "WhatsApp",
@@ -35,7 +35,7 @@ export default function Community() {
       textGradient: "from-[#25D366] to-[#128C7E]",
       buttonColor: "bg-[#25D366]",
       description: "Get instant updates directly to your phone. Join our WhatsApp group for fast announcements and community chats.",
-      link: "https://chat.whatsapp.com/yourlink",
+      link: "https://chat.whatsapp.com/L2L6fFUNzoH1JW7eijiYqk",
     },
     tiktok: {
       title: "TikTok",
@@ -48,7 +48,7 @@ export default function Community() {
       textGradient: "from-white to-gray-400",
       buttonColor: "bg-black",
       description: "Watch our latest trailers, funny moments, and sneak peeks of upcoming updates. Don't forget to follow!",
-      link: "https://tiktok.com/@yourhandle",
+      link: "https://www.tiktok.com/@edgborn?_r=1&_t=ZS-92d8io49OrQ",
     },
   }
 
@@ -192,7 +192,7 @@ export default function Community() {
                          {communities.tiktok.icon}
                       </div>
                       
-                      <div className="text-white font-bold text-2xl tracking-tight relative z-10">@GarudaPS</div>
+                      <div className="text-white font-bold text-2xl tracking-tight relative z-10">@edgborn</div>
                       <p className="text-white/40 text-sm mt-2 relative z-10">Follow for updates</p>
                    </div>
                 )}
