@@ -49,11 +49,11 @@ export default function Features() {
   return (
     <section id="features" className="relative py-24 overflow-hidden bg-[#0a0a0a]">
       
-      {/* Gradient Overlay (Seamless Blend) - TETAP ADA */}
+      {/* Gradient Overlay (Seamless Blend) */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-[#0a0a0a] z-20 pointer-events-none -translate-y-full" />
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-20 pointer-events-none" />
 
-      {/* Background decoration (Optional glow behind glass cards) */}
+      {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-orange-500/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container px-4 mx-auto mb-16 text-center relative z-10">
@@ -68,20 +68,28 @@ export default function Features() {
         </p>
       </div>
 
+      {/* --- CAROUSEL CONTAINER --- */}
       <div className="relative flex w-full z-10">
-        {/* Tambahkan mask-image agar carousel terlihat memudar di kiri & kanan */}
-        <div className="flex animate-scroll gap-6 py-4 whitespace-nowrap [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
+        
+        <div className="absolute top-0 left-0 z-20 h-full w-24 md:w-40 
+                        bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent 
+                        pointer-events-none" />
+
+        <div className="absolute top-0 right-0 z-20 h-full w-24 md:w-40 
+                        bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent 
+                        pointer-events-none" />
+
+        <div className="flex animate-scroll gap-6 py-4 whitespace-nowrap">
           {[...FEATURE_ITEMS, ...FEATURE_ITEMS].map((item, index) => (
             <div
               key={index}
-              // --- STYLE GLASSMORPHISM DISINI ---
               className="flex-shrink-0 w-[350px] 
-                         bg-white/5                        
-                         backdrop-blur-xl                  
-                         border border-white/10            
+                         bg-gradient-to-b from-white/[0.03] to-transparent
+                         backdrop-blur-md                  
+                         border border-white/[0.08]            
                          shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] 
                          p-8 rounded-2xl 
-                         hover:bg-white/10                 
+                         hover:bg-white/[0.05]                 
                          hover:border-[#ff5c00]/50         
                          hover:-translate-y-2              
                          transition-all duration-300 group"
