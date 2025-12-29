@@ -5,6 +5,13 @@ import Footer from "@/components/layout/Footer";
 export const metadata = {
   title: "GarudaPS – Growtopia Private Server",
   description: "Garuda Private Server official website",
+  
+  // TAMBAHKAN BAGIAN INI:
+  icons: {
+    // Pastikan file gambarnya ada di folder public/images/logo/
+    icon: "/images/logo/GARUDAPS2026.png", 
+    apple: "/images/logo/GARUDAPS2026.png", // (Opsional) Biar di iPhone juga muncul
+  },
 };
 
 export default function RootLayout({
