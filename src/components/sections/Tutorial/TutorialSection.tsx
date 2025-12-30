@@ -71,7 +71,7 @@ const TUTORIAL_DATA: TutorialItem[] = [
     imageSrc: "/images/icons/virtual.png",
     steps: [
       { text: "Download Virtual Host APK", link: "https://www.apkshub.com/app/com.github.xfalcon.vhosts", isDownload: false },
-      { text: "Download our Hosts File", link: "https://play.garuda.com/GarudaPS", isDownload: true },
+      { text: "Download our Hosts File", link: "https://play.garudaps.com/garudaps", isDownload: true },
       { text: "Open App → Click 'SELECT HOSTS FILE'." }, 
       { text: "Select the file you just downloaded → Turn ON (Green)." }
     ]
