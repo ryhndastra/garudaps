@@ -46,7 +46,7 @@ const TUTORIAL_DATA: TutorialItem[] = [
     steps: [
       { text: "Download PowerTunnel APK", link: "https://android.izzysoft.de/repo/apk/io.github.krlvm.powertunnel.android" },
       { text: "Open App → Menu (Plugin) → Hosts → Settings (Gear Icon)." },
-      { text: "Enter this URL in the box:", code: "https://garudaps.vercel.app/android" },
+      { text: "Enter this URL in the box:", code: "https://play.garudaps.com/android" },
       { text: "Go Back → Click 'CONNECT' button → Open Growtopia." }
     ]
   },
@@ -59,7 +59,7 @@ const TUTORIAL_DATA: TutorialItem[] = [
     steps: [
       { text: "Download Hosts Go (No Root)", link: "https://www.mediafire.com/file/ctly08te3i8rlwq" },
       { text: "Open App → Hosts Editor → Enable Switch → Download Hosts File." },
-      { text: "Enter this URL:", code: "https://garudaps.vercel.app/android" },
+      { text: "Enter this URL:", code: "https://play.garudaps.com/android" },
       { text: "Apply → Start Protection (VPN) → Open Growtopia." }
     ]
   },
@@ -71,7 +71,7 @@ const TUTORIAL_DATA: TutorialItem[] = [
     imageSrc: "/images/icons/virtual.png",
     steps: [
       { text: "Download Virtual Host APK", link: "https://www.apkshub.com/app/com.github.xfalcon.vhosts", isDownload: false },
-      { text: "Download our Hosts File", link: "#", isDownload: true },
+      { text: "Download our Hosts File", link: "https://play.garuda.com/GarudaPS", isDownload: true },
       { text: "Open App → Click 'SELECT HOSTS FILE'." }, 
       { text: "Select the file you just downloaded → Turn ON (Green)." }
     ]
@@ -84,7 +84,7 @@ const TUTORIAL_DATA: TutorialItem[] = [
     imageSrc: "/images/icons/surge.png",
     steps: [
       { text: "Install Surge 5 from App Store", link: "https://apps.apple.com/us/app/surge-5/id1442620678" },
-      { text: "Open App → Import Profile via URL.", code: "https://garudaps.vercel.app/ios" },
+      { text: "Open App → Import Profile via URL.", code: "https://play.garudaps.com/ios" },
       { text: "Allow VPN Configuration → Tap 'Start' → Open Growtopia." }
     ]
   },
