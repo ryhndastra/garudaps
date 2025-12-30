@@ -1,42 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useServer } from "@/context/ServerContext" 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Play, MessageCircle, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 
 export default function Hero() {
-  // State untuk menyimpan data status server dari API
-  const [serverStatus, setServerStatus] = useState({
-    online: false,
-    players: 0,
-    loading: true
-  })
-
-  // Fetch data
-  const fetchStatus = async () => {
-    try {
-      const response = await fetch("http://157.66.54.50:3001/api/status")
-      const data = await response.json()
-      
-      setServerStatus({
-        online: data.status === "online",
-        players: data.players || 0,
-        loading: false
-      })
-    } catch (error) {
-      console.error("Gagal mengambil status server:", error)
-      setServerStatus({ online: false, players: 0, loading: false })
-    }
-  }
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    fetchStatus()
-    const interval = setInterval(fetchStatus, 1500)
-    return () => clearInterval(interval)
-  }, [])
+  const { online, players, loading } = useServer();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -70,6 +41,7 @@ export default function Hero() {
 
       <div className="container relative z-10 px-4 flex flex-col items-center text-center">
         
+        {/* SERVER STATUS */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,23 +50,22 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:bg-white/10 transition-colors cursor-default">
             <span className="relative flex h-2 w-2">
-              <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${serverStatus.online ? 'bg-green-400' : 'bg-red-400'}`}></span>
-              <span className={`relative inline-flex rounded-full h-2 w-2 ${serverStatus.online ? 'bg-green-500' : 'bg-red-500'}`}></span>
+              <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${online ? 'bg-green-400' : 'bg-red-400'}`}></span>
+              <span className={`relative inline-flex rounded-full h-2 w-2 ${online ? 'bg-green-500' : 'bg-red-500'}`}></span>
             </span>
             <span className="text-[10px] md:text-xs font-bold text-white/90 uppercase tracking-widest">
-              {serverStatus.loading ? (
+              {loading ? (
                 "Checking Server..."
               ) : (
                 <>
-                  Server {serverStatus.online ? "Online" : "Offline"} 
+                  Server {online ? "Online" : "Offline"} 
                   <span className="mx-2 text-white/20">|</span> 
-                  {serverStatus.players} Players Online
+                  {players} Players Online
                 </>
               )}
             </span>
           </div>
         </motion.div>
-
 
         {/* LOGO */}
         <motion.div
@@ -114,7 +85,6 @@ export default function Hero() {
             priority
           />
         </motion.div>
-
 
         {/* TEXT CONTENT */}
         <motion.div

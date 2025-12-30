@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ServerProvider } from "@/context/ServerContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,8 +42,9 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <body className={`${inter.className} bg-[#1a1a1a] text-slate-100 antialiased`}>
-        {/* HANYA CHILDREN. Navbar, Footer, dll SUDAH PINDAH KE (main)/layout.tsx */}
+        <ServerProvider>
         {children}
+        </ServerProvider>
       </body>
     </html>
   );
