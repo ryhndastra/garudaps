@@ -165,7 +165,7 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[140] lg:hidden"
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-140 lg:hidden"
               onClick={() => setOpen(false)}
             />
 
@@ -174,7 +174,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[85%] max-w-sm z-[150] lg:hidden bg-[#0a0a0a] border-l border-white/10 shadow-2xl overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-[85%] max-w-sm z-150 lg:hidden bg-[#0a0a0a] border-l border-white/10 shadow-2xl overflow-y-auto"
             >
               <div className="flex flex-col min-h-full">
                 

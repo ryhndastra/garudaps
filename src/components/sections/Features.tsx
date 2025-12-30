@@ -35,7 +35,7 @@ const UltraCard = ({
     >
       {/* Hover Gradient Effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-         <div className={`absolute inset-[-50%] animate-[spin_3s_linear_infinite] bg-gradient-to-r ${gradientColor} via-transparent to-transparent blur-3xl opacity-30`} />
+         <div className={`absolute inset-[-50%] animate-[spin_3s_linear_infinite] bg-linear-to-r ${gradientColor} via-transparent to-transparent blur-3xl opacity-30`} />
       </div>
       
       {/* Mouse Spotlight Effect */}
@@ -62,18 +62,15 @@ const UltraCard = ({
 
 export default function Features() {
   return (
-    // FIX 1: Mulai dengan #0a0a0a agar sama persis dengan akhir section Tutorial
-    <section id="features" className="relative py-24 bg-gradient-to-b from-[#0a0a0a] via-black to-black overflow-hidden">
+    <section id="features" className="relative py-24 bg-linear-to-b from-[#0a0a0a] via-black to-black overflow-hidden">
       
-      {/* FIX 2: Gradient Penutup Garis (Double Protection) */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-20 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-20 pointer-events-none" />
 
       {/* BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 pointer-events-none">
-          {/* FIX 3: Mask Image agar Grid muncul perlahan (Fade In) dari atas */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:linear-gradient(to_bottom,transparent,black_20%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-size-[32px_32px] mask-[linear-gradient(to_bottom,transparent,black_20%)]" />
           
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-orange-600/10 blur-[120px] rounded-full z-0" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-125 bg-orange-600/10 blur-[120px] rounded-full z-0" />
           <div className="absolute inset-0 opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
       </div>
 
@@ -158,7 +155,7 @@ export default function Features() {
              </div>
           </UltraCard>
 
-          {/* CUSTOM ITEMS (DENGAN GAMBAR PHOENIX/GRIFFIN BARU) */}
+          {/* CUSTOM ITEMS */}
           <UltraCard className="md:col-span-3 min-h-45" gradientColor="from-purple-500 via-pink-500 to-rose-500">
              <div className="flex items-center gap-5 h-full relative z-10">
                 <div className="w-14 h-14 shrink-0 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shadow-[inset_0_0_15px_rgba(168,85,247,0.1)]">

@@ -7,11 +7,6 @@ import WelcomeScreen from "@/components/common/WelcomeScreen";
 export const metadata = {
   title: "GarudaPS – Growtopia Private Server",
   description: "Garuda Private Server official website",
-  
-  icons: {
-    icon: "/images/logo/GARUDAPS2026.png", 
-    apple: "/images/logo/GARUDAPS2026.png",
-  },
 };
 
 export default function RootLayout({
