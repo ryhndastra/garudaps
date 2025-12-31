@@ -10,7 +10,7 @@ const teamMembers = [
     id: "irexus",
     name: "iRexus",
     role: "Server Owner",
-    avatar: "/images/team/iRexus.jpeg",
+    avatar: "/images/team/irexus.jpeg",
     color: "#EAB308", 
     stats: "01",
     icon: Crown,
@@ -19,7 +19,7 @@ const teamMembers = [
   {
     id: "stargel",
     name: "StarGel",
-    role: "Lead Developer",
+    role: "Server Coder",
     avatar: "/images/team/StarGel.png",
     color: "#3B82F6", 
     stats: "02",
@@ -28,9 +28,9 @@ const teamMembers = [
   },
   {
     id: "rasha",
-    name: "Rasha",
+    name: "Ryo",
     role: "Senior Staff",
-    avatar: "/images/team/Ryo.jpeg",
+    avatar: "/images/team/RYo.jpeg",
     color: "#22C55E", 
     stats: "03",
     icon: Shield,
@@ -38,7 +38,7 @@ const teamMembers = [
   },
   {
     id: "sho",
-    name: "Sho",
+    name: "Hades",
     role: "Senior Staff",
     avatar: "/images/team/Sho.jpeg",
     color: "#22C55E", 
