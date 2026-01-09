@@ -25,6 +25,19 @@ interface TutorialItem {
 
 const TUTORIAL_DATA: TutorialItem[] = [
   {
+    id: "apk",
+    label: "Application",
+    icon: Smartphone,
+    color: "text-orange-400",
+    imageSrc: "/images/logo/garudaps.jpg",
+    steps: [
+      { text: "Uninstall Real Growtopia if you have it. " },
+      { text: "Restart your device (optional but recommended)." },
+      { text: "Install the GarudaPs APK.", link: "http://apk.garudaps.com"},
+      { text: "Open the app, and have fun!!" }
+    ]
+  },
+  {
     id: "windows",
     label: "Windows",
     icon: Monitor,
@@ -131,7 +144,7 @@ const CodeSnippet = ({ code, isMultiLine }: { code: string, isMultiLine?: boolea
 }
 
 export default function TutorialSection() {
-  const [activeTab, setActiveTab] = useState("windows")
+  const [activeTab, setActiveTab] = useState("apk")
   const activeContent = TUTORIAL_DATA.find(t => t.id === activeTab) || TUTORIAL_DATA[0]
 
   return (
