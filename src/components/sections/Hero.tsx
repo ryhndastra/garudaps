@@ -1,37 +1,39 @@
-"use client"
+"use client";
 
-import { useServer } from "@/context/ServerContext" 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Play, MessageCircle, ShoppingCart } from "lucide-react"
-import Image from "next/image"
+import { useServer } from "@/context/ServerContext";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Play, MessageCircle, ShoppingCart } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const { online, players, loading } = useServer();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const openShop = () => {
-    window.open("https://shop.garudaps.com/", "_blank") 
-  }
+    window.open("https://shop.garudaps.com/", "_blank");
+  };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24">
-      
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24"
+    >
       {/* --- BACKGROUND LAYER --- */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src="/images/banner.jpg" 
-          alt="GarudaPS Background" 
-          fill 
+        <Image
+          src="/images/banner.jpg"
+          alt="GarudaPS Background"
+          fill
           sizes="100vw"
-          className="object-cover opacity-50 blur-[1px]" 
-          priority 
+          className="object-cover opacity-50 blur-[1px]"
+          priority
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0a_85%)]" />
         <div className="absolute inset-0 bg-linear-to-b from-[#0a0a0a]/80 via-transparent to-[#0a0a0a]" />
@@ -41,26 +43,29 @@ export default function Hero() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 md:w-150 md:h-75 bg-orange-500/10 blur-3xl md:blur-[120px] rounded-full pointer-events-none mix-blend-screen transform-gpu" />
 
       <div className="container relative z-10 px-4 flex flex-col items-center text-center">
-        
         {/* SERVER STATUS */}
         <motion.div
-          initial={{ opacity: 0, y: -10 }} 
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
           className="mb-8 md:mb-10"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:bg-white/10 transition-colors cursor-default">
             <span className="relative flex h-2 w-2">
-              <span className={`hidden md:inline-flex animate-ping absolute h-full w-full rounded-full opacity-75 ${online ? 'bg-green-400' : 'bg-red-400'}`}></span>
-              <span className={`relative inline-flex rounded-full h-2 w-2 ${online ? 'bg-green-500' : 'bg-red-500'}`}></span>
+              <span
+                className={`hidden md:inline-flex animate-ping absolute h-full w-full rounded-full opacity-75 ${online ? "bg-green-400" : "bg-red-400"}`}
+              ></span>
+              <span
+                className={`relative inline-flex rounded-full h-2 w-2 ${online ? "bg-green-500" : "bg-red-500"}`}
+              ></span>
             </span>
             <span className="text-[10px] md:text-xs font-bold text-white/90 uppercase tracking-widest min-w-30">
               {loading ? (
                 "Checking Server..."
               ) : (
                 <>
-                  Server {online ? "Online" : "Offline"} 
-                  <span className="mx-2 text-white/20">|</span> 
+                  Server {online ? "Online" : "Offline"}
+                  <span className="mx-2 text-white/20">|</span>
                   {players} Players
                 </>
               )}
@@ -70,17 +75,17 @@ export default function Hero() {
 
         {/* LOGO */}
         <motion.div
-          initial={{ scale: 0.9, opacity: 0 }} 
+          initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative w-70 h-35 md:w-162.5 md:h-80 mb-8 transform-gpu"
+          className="relative w-32 h-16 md:w-80 md:h-40 mb-8 transform-gpu"
         >
           <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-orange-600/20 blur-[80px] rounded-full pointer-events-none transform-gpu" />
-          
+
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-orange-500/20 md:bg-orange-500/30 blur-xl md:blur-2xl rounded-full animate-pulse pointer-events-none transform-gpu" />
-          
+
           <Image
-            src="/images/logo/GARUDAPS2026.png"
+            src="/images/logo/garuda-logo.png"
             alt="GarudaPS Logo"
             fill
             sizes="(max-width: 768px) 80vw, 50vw"
@@ -97,23 +102,26 @@ export default function Hero() {
           className="max-w-4xl mx-auto space-y-6 md:space-y-8"
         >
           <h1 className="text-4xl md:text-7xl font-black text-white leading-[0.9] drop-shadow-2xl tracking-tight">
-            BUILD YOUR <span className="animate-gradient-text filter drop-shadow-[0_0_20px_rgba(234,88,12,0.5)]">EMPIRE.</span>
+            BUILD YOUR{" "}
+            <span className="animate-gradient-text filter drop-shadow-[0_0_20px_rgba(234,88,12,0.5)]">
+              EMPIRE.
+            </span>
           </h1>
-          
+
           <p className="text-base md:text-xl text-white/70 leading-relaxed max-w-xl md:max-w-2xl mx-auto drop-shadow-md font-medium px-4">
-            Join the ultimate Growtopia Private Server experience. 
-            Custom items, balanced economy, and a legendary community waiting for you.
+            Join the ultimate Growtopia Private Server experience. Custom items,
+            balanced economy, and a legendary community waiting for you.
           </p>
 
           {/* BUTTONS */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-4 w-full px-8 md:px-0">
-            
             <Button
               size="lg"
               onClick={() => scrollToSection("tutorial")}
               className="w-full md:w-auto h-12 md:h-14 px-8 rounded-full bg-linear-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white font-bold text-lg shadow-[0_0_30px_rgba(234,88,12,0.4)] border border-orange-400/50 transition-transform active:scale-95"
             >
-              <Play className="mr-2 h-5 w-5 md:h-6 md:w-6 fill-white" /> PLAY NOW
+              <Play className="mr-2 h-5 w-5 md:h-6 md:w-6 fill-white" /> PLAY
+              NOW
             </Button>
 
             <Button
@@ -133,9 +141,8 @@ export default function Hero() {
               <MessageCircle className="mr-2 h-5 w-5 md:h-6 md:w-6" /> Discord
             </Button>
           </div>
-
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
