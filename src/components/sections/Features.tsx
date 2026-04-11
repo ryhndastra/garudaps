@@ -211,7 +211,7 @@ export default function Features() {
                 </h3>
                 <p className="text-white/50 text-sm leading-snug">
                   Exclusive legendary wings & pets like{" "}
-                  <span className="text-purple-400 font-bold">Phoenix</span> you
+                  <span className="text-purple-400 font-bold">Dragons</span> you
                   won&apos;t find elsewhere.
                 </p>
               </div>

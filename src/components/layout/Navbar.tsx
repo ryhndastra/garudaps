@@ -15,7 +15,15 @@ export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
 
   const navItems = useMemo(
-    () => ["Home", "Tutorial", "Features", "About", "Community", "Teams"],
+    () => [
+      "Home",
+      "Leaderboard",
+      "Tutorial",
+      "Features",
+      "About",
+      "Community",
+      "Teams",
+    ],
     [],
   );
 
