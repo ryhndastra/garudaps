@@ -100,7 +100,6 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-0 left-0 w-full z-110 px-4 md:px-6 py-4 transition-all duration-300 pointer-events-none">
-        {/* CONTAINER MAIN*/}
         <div className="w-full max-w-350 mx-auto flex justify-between items-center relative pointer-events-auto">
           {/* --- LOGO --- */}
           <div className="flex items-center z-120 min-w-30 h-12">
@@ -130,7 +129,7 @@ export default function Navbar() {
           </div>
 
           {/* --- DESKTOP NAV LINKS --- */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center gap-3">
             <div
               ref={navRef}
               className="relative flex items-center gap-1 bg-black/60 border border-white/10 rounded-full px-2 py-1.5 shadow-2xl backdrop-blur-md"
@@ -169,6 +168,15 @@ export default function Navbar() {
                 );
               })}
             </div>
+
+            <a
+              href="https://account.garudaps.com/account"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium bg-black/60 border border-orange-500/40 text-orange-400 hover:bg-orange-500/10 backdrop-blur-md shadow-2xl transition-colors duration-300 whitespace-nowrap"
+            >
+              ↺ Recovery Account
+            </a>
           </div>
 
           {/* --- MOBILE HAMBURGER --- */}
@@ -253,6 +261,17 @@ export default function Navbar() {
                       </button>
                     </motion.div>
                   ))}
+                </div>
+
+                <div className="px-6 pb-4">
+                  <a
+                    href="https://account.garudaps.com/account"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium bg-black/60 border border-orange-500/40 text-orange-400 hover:bg-orange-500/10 backdrop-blur-md shadow-2xl transition-colors duration-300 whitespace-nowrap"
+                  >
+                    ↺ Recovery Account
+                  </a>
                 </div>
 
                 <div className="p-6 border-t border-white/10 text-center">
